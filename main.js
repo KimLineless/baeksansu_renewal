@@ -42,6 +42,7 @@ $('.sec4_top_img').ripples({
 // 
 
 let header = document.querySelector('header');
+let headerIn = document.querySelector('header');
 let headerMoving = function (direction) {
     if (direction === "up") {
         header.className = 'hd';
@@ -58,6 +59,17 @@ document.addEventListener("scroll", function () {
         headerMoving("up");
     }
     prevScrollTop = nextScrollTop;
+});
+
+const headerHeight = header.getBoundingClientRect().height;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > headerHeight) {
+        header.setAttribute("style", "background: #000;");
+    } else {
+
+        header.setAttribute("style", "background: transparent;");
+    }
 });
 
 // 
