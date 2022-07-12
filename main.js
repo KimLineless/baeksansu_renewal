@@ -16,8 +16,8 @@ var swiper = new Swiper(".mySwiper", {
 if (window.innerWidth > 1000) {
     let balls = document.getElementsByClassName("sec3_img");
     document.onmousemove = function () {
-        let x = event.clientX * 20 / window.innerWidth + "%";
-        let y = event.clientY * -100 / window.innerHeight + "%";
+        let x = event.clientX * 10 / window.innerWidth + "50%";
+        let y = event.clientY * -200 / window.innerHeight + "%";
 
         for (let i = 0; i < 5; i++) {
             balls[i].style.left = x;
@@ -28,11 +28,6 @@ if (window.innerWidth > 1000) {
 }
 
 $('.sec1').ripples({
-    resolution: 512,
-    dropRadius: 20,
-    perturbance: 0.04,
-});
-$('.sec3_top_img').ripples({
     resolution: 512,
     dropRadius: 20,
     perturbance: 0.04,
@@ -65,7 +60,7 @@ const headerHeight = header.getBoundingClientRect().height;
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > headerHeight) {
-        header.setAttribute("style", "background: #61cbe1;");
+        header.setAttribute("style", "background: #005B91;");
     } else {
 
         header.setAttribute("style", "background: transparent;");
@@ -87,7 +82,7 @@ gsap.to(".massiveImage", {
         end: () => innerWidth * 3,
         scrub: true,
         pin: true,
-        invalidateOnRefresh: true,
+        // invalidateOnRefresh: true,x
         anticipatePin: 1
 
     }
