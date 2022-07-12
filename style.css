@@ -232,55 +232,79 @@ header.scrollDown {
 
 .sec3 {
     background-color: #fff;
+    margin-bottom: 100px;
 }
 
-.sec3 .inner {
+.sec3 .sec3_top_img {
+    width: 100vw;
+    height: 300px;
+    background: url(./img/main2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.sec3 .sec3_left {
-    width: 50%;
-    height: 90vh;
-}
-
-.sec3 h3 {
-    position: relative;
-    left: 55%;
-    top: 10%;
-    font-size: 2rem;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-
-.sec3 h3::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 100%;
-    background-color: #171717;
-    left: -20%;
-    bottom: 0%;
-}
-
-.swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sec3 .sec3_bot {
-    margin-top: 100px;
+    background-attachment: fixed;
     margin-bottom: 200px;
 }
 
-.sec3 .swiper-slide {
-    width: 500px;
+.sec3 .sec3_top_img h4 {
+    position: relative;
+    font-size: 2rem;
+    padding: 100px 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
-.sec3 .swiper-slide img {
+.sec3 .sec3_top_img a {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.sec3 .sec3_bot li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.sec3 .sec3_bot li a {
+    display: block;
+    width: 60%;
+    padding: 50px;
+    padding-left: 0;
+    position: relative;
+    left: 37.1%;
+}
+
+.sec3 .sec3_bot li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #171717;
+    left: 0;
+    top: 100%;
+}
+
+.sec3 .sec3_bot .sec3_img {
+    width: 300px;
+    position: absolute;
+    left: 10%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.sec3 .sec3_bot .sec3_img img {
+    width: 100%;
+}
+
+.sec3 .sec3_bot li:hover .sec3_img {
+    opacity: 1;
 }
 
 @media (max-width : 1000px) {
@@ -365,135 +389,40 @@ header.scrollDown {
     .sec3 .sec3_top h3 {
         position: relative;
     }
-
-    .sec3 .sec3_top h3::after {
-        position: absolute;
-        content: "무기물질 함량(mg/L)";
-        width: 100%;
-        top: -5%;
-        left: 50%;
-        transform: translateX(-30%);
-        white-space: nowrap;
-        font-size: 1.1rem;
-    }
-
-    /* sec3 */
-    .sec3 video {
-        display: none;
-    }
-
-    .sec3 .swiper-slide img {
-        width: 80%;
-    }
 }
 
 
 /* sec4 */
+
 .sec4 {
-    background-color: #fff;
-    margin-bottom: 100px;
-}
-
-.sec4 .sec4_top_img {
-    width: 100vw;
-    height: 600px;
-    background: url(./img/main2.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
-    margin-bottom: 200px;
-}
-
-.sec4 .sec4_top_img h4 {
-    position: relative;
-    font-size: 2rem;
-    padding: 100px 200px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-.sec4 .sec4_top_img a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-}
-
-.sec4 .sec4_bot li {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-}
-
-.sec4 .sec4_bot li a {
-    display: block;
-    width: 60%;
-    padding: 50px;
-    padding-left: 0;
-    position: relative;
-    left: 37.1%;
-}
-
-.sec4 .sec4_bot li a::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #171717;
-    left: 0;
-    top: 100%;
-}
-
-.sec4 .sec4_bot .sec4_img {
-    width: 300px;
-    position: absolute;
-    left: 10%;
-    opacity: 0;
-    transition: .3s;
-}
-
-.sec4 .sec4_bot .sec4_img img {
-    width: 100%;
-}
-
-.sec4 .sec4_bot li:hover .sec4_img {
-    opacity: 1;
-}
-
-/* sec5 */
-
-.sec5 {
     background-color: #fff;
     margin-left: 100px;
     margin-bottom: 250px;
 }
 
 
-.sec5 .side_scroll {
+.sec4 .side_scroll {
     display: flex;
     width: 230vw;
 }
 
-.sec5 .side_scroll::-webkit-scrollbar {
+.sec4 .side_scroll::-webkit-scrollbar {
     display: none
 }
 
-.sec5 .scroll_element {
+.sec4 .scroll_element {
     width: 500px;
     overflow: hidden;
     margin-right: 100px;
 }
 
 
-.sec5 img {
+.sec4 img {
     width: 100%;
 }
+
+/* sec5 */
+
 
 /* footer */
 
