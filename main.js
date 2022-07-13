@@ -16,7 +16,7 @@ var swiper = new Swiper(".mySwiper", {
 if (window.innerWidth > 1000) {
     let balls = document.getElementsByClassName("sec3_img");
     document.onmousemove = function () {
-        let x = event.clientX * 10 / window.innerWidth + "50%";
+        let x = event.clientX * 10 / window.innerWidth + "100%";
         let y = event.clientY * -200 / window.innerHeight + "%";
 
         for (let i = 0; i < 5; i++) {
@@ -73,7 +73,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.to(".massiveImage", {
-    xPercent: -100,
+    xPercent: -125,
     x: () => innerWidth,
     ease: "none",
     scrollTrigger: {
