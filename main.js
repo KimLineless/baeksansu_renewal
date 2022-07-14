@@ -1,24 +1,23 @@
 AOS.init();
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.5,
-    spaceBetween: 30,
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: true,
-    },
-});
-
-$('.ham').click(function(){
+$('.ham').click(function () {
     $(this).toggleClass('active');
- });
+    $('.gnb').on('scroll touchmove mousewheel', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+    });
+    $(this).toggleClass('on')
+    $('.gnb').toggleClass('on')
+});
 
 
 if (window.innerWidth > 1000) {
     let balls = document.getElementsByClassName("sec3_img");
+    let balls1 = document.getElementsByClassName("sec3_img1");
     document.onmousemove = function () {
-        let x = event.clientX * 10 / window.innerWidth + "100%";
-        let y = event.clientY * -200 / window.innerHeight + "%";
+        let x = event.clientX * 5 / window.innerWidth + "20%";
+        let y = event.clientY * -100 / window.innerHeight + "%";
 
         for (let i = 0; i < 5; i++) {
             balls[i].style.left = x;
@@ -78,7 +77,7 @@ if (window.innerWidth > 1450) {
     });
 
     gsap.to(".massiveImage", {
-        xPercent: -125,
+        xPercent: -200,
         x: () => innerWidth,
         ease: "none",
         scrollTrigger: {
@@ -109,29 +108,64 @@ if (window.innerWidth > 1450) {
             pin: true,
             invalidateOnRefresh: true,
             anticipatePin: 1
-
         }
     });
 }
 
 // 
 
-$(function () {
-    $(".sec3_li1").mouseover(function(){
-      document.getElementById("sec3_txt1").innerHTML = "바로가기";
-    })
-    $(".sec3_li2").mouseover(function(){
-      document.getElementById("sec3_txt2").innerHTML = "바로가기";
-    })
-    $(".sec3_li3").mouseover(function(){
-      document.getElementById("sec3_txt3").innerHTML = "바로가기";
-    })
-    $(".sec3_li4").mouseover(function(){
-      document.getElementById("sec3_txt4").innerHTML = "바로가기";
-    })
-    $(".sec3_li5").mouseover(function(){
-      document.getElementById("sec3_txt5").innerHTML = "바로가기";
+if (window.innerWidth < 1000) {
+
+    $(function () {
+        $(".sec3_li1").mouseover(function () {
+            document.getElementById("sec3_txt1").innerHTML = "바로가기";
+        })
+        $(".sec3_li2").mouseover(function () {
+            document.getElementById("sec3_txt2").innerHTML = "바로가기";
+        })
+        $(".sec3_li3").mouseover(function () {
+            document.getElementById("sec3_txt3").innerHTML = "바로가기";
+        })
+        $(".sec3_li4").mouseover(function () {
+            document.getElementById("sec3_txt4").innerHTML = "바로가기";
+        })
+        $(".sec3_li5").mouseover(function () {
+            document.getElementById("sec3_txt5").innerHTML = "바로가기";
+        })
     })
 
+    // let swiper2 = new Swiper(".mySwiper2", {
+    //     slidesPerView: 3,
+    //     spaceBetween: 30,
+    //     loop:true,
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         clickable: true,
+    //     },
+    // });
+}
 
-  })
+// 
+"use strict";
+
+const indicator = document.querySelector('.nav-indicator');
+const items = document.querySelectorAll('.nav-item');
+
+function handleIndicator(el) {
+  items.forEach(item => {
+    item.classList.remove('is-active');
+    item.removeAttribute('style');
+  });
+  indicator.style.width = `${el.offsetWidth}px`;
+  indicator.style.left = `${el.offsetLeft}px`;
+  indicator.style.backgroundColor = el.getAttribute('active-color');
+  el.classList.add('is-active');
+  el.style.color = el.getAttribute('active-color');
+}
+
+items.forEach((item, index) => {
+  item.addEventListener('click', e => {
+    handleIndicator(e.target);
+  });
+  item.classList.contains('is-active') && handleIndicator(item);
+});
