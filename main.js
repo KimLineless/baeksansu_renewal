@@ -1,8 +1,5 @@
 AOS.init();
 
-$(document).ready(function () {
-    $('#multiscroll').multiscroll();
-});
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2.5,
     spaceBetween: 30,
@@ -11,6 +8,10 @@ var swiper = new Swiper(".mySwiper", {
         hide: true,
     },
 });
+
+$('.ham').click(function(){
+    $(this).toggleClass('active');
+ });
 
 
 if (window.innerWidth > 1000) {
@@ -71,41 +72,66 @@ window.addEventListener("scroll", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+if (window.innerWidth > 1450) {
+    $(document).ready(function () {
+        $('#multiscroll').multiscroll();
+    });
 
-gsap.to(".massiveImage", {
-    xPercent: -125,
-    x: () => innerWidth,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".massiveImage",
-        start: "center center",
-        end: () => innerWidth * 3,
-        scrub: true,
-        pin: true,
-        // invalidateOnRefresh: true,x
-        anticipatePin: 1
+    gsap.to(".massiveImage", {
+        xPercent: -125,
+        x: () => innerWidth,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".massiveImage",
+            start: "center center",
+            end: () => innerWidth * 3,
+            scrub: true,
+            pin: true,
+            invalidateOnRefresh: true,
+            anticipatePin: 1
 
-    }
-});
+        }
+    });
+} else if (window.innerWidth > 1000) {
+    $(document).ready(function () {
+        $('#multiscroll').multiscroll();
+    });
+
+    gsap.to(".massiveImage", {
+        xPercent: -110,
+        x: () => innerWidth,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".massiveImage",
+            start: "center center",
+            end: () => innerWidth * 4.5,
+            scrub: true,
+            pin: true,
+            invalidateOnRefresh: true,
+            anticipatePin: 1
+
+        }
+    });
+}
 
 // 
 
+$(function () {
+    $(".sec3_li1").mouseover(function(){
+      document.getElementById("sec3_txt1").innerHTML = "바로가기";
+    })
+    $(".sec3_li2").mouseover(function(){
+      document.getElementById("sec3_txt2").innerHTML = "바로가기";
+    })
+    $(".sec3_li3").mouseover(function(){
+      document.getElementById("sec3_txt3").innerHTML = "바로가기";
+    })
+    $(".sec3_li4").mouseover(function(){
+      document.getElementById("sec3_txt4").innerHTML = "바로가기";
+    })
+    $(".sec3_li5").mouseover(function(){
+      document.getElementById("sec3_txt5").innerHTML = "바로가기";
+    })
 
-var controller = new ScrollMagic.Controller({
-    globalSceneOptions: {
-        triggerHook: 'onLeave',
-        duration: "100%"
-    }
-});
-var slides = document.querySelectorAll("section.panel");
 
-for (var i = 0; i < slides.length; i++) {
-    var scene = new ScrollMagic.Scene({
-            triggerElement: slides[i]
-        })
-        .setPin(slides[i], {
-            pushFollowers: false
-        })
-        .addIndicators()
-        .addTo(controller);
-}
+  })
