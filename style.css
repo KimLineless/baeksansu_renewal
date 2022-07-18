@@ -1,5 +1,6 @@
     @charset 'utf-8';
     @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
     @font-face {
         font-family: 's-core_2';
@@ -31,6 +32,10 @@
         max-width: 1720px;
         width: 90vw;
         margin: auto;
+    }
+
+    header {
+        background-color: rgba(92, 198, 240, 0.9);
     }
 
     header.scrollDown {
@@ -105,7 +110,7 @@
         left: 0;
         width: 100%;
         height: 5px;
-        background-color: #8fd3f4;
+        background-color: #00abd3;
         border-radius: 8px 8px 0 0;
         opacity: 0;
         transition: 0.3s;
@@ -266,7 +271,7 @@
         width: 100vw;
         height: 100vh;
         background: url(./img/mountain-baekdu-g3c7b94a76_1920.jpg) no-repeat;
-        background-position: center;
+        background-position: 50% 65%;
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -278,6 +283,225 @@
         position: absolute;
         top: 48%;
         transform: translateY(-50%);
+    }
+
+    .text_con {
+        height: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-size: 5rem;
+        line-height: 6rem;
+        color: #00abd3;
+        font-family: Pretendard;
+    }
+
+    .text_con::after {
+        position: absolute;
+        content: "";
+        width: 240%;
+        height: 47%;
+        top: 487%;
+        left: -60%;
+        border-radius: 5px;
+        background-image: linear-gradient(to top, #e3e3e3, #c2c2c6, #dfe1e7, #dee1e6, #bbbfc4);
+    }
+
+    .sec1 h3 {
+        position: absolute;
+        top: -50%;
+        transform: translateY(-50%);
+        border-right: 2px solid #777;
+        font-size: 5rem;
+        width: 60%;
+        animation: cursor .9s infinite steps(2);
+        text-align: center;
+        color: #fff;
+    }
+
+    .bot_img {
+        position: absolute;
+        left: 84.5%;
+        top: 100%;
+        transform: translate(-100%, -90%);
+    }
+
+    .bot_water {
+        position: absolute;
+        left: 30%;
+        top: 94%;
+        transform: translate(-100%, -90%);
+    }
+
+    .bot_water1 {
+        position: absolute;
+        left: 27%;
+        top: 95%;
+        transform: translate(-100%, -90%);
+    }
+
+    .bot_water2 {
+        position: absolute;
+        left: 32%;
+        top: 95%;
+        transform: translate(-100%, -90%);
+    }
+
+    .bot_water3 {
+        position: absolute;
+        left: 27%;
+        top: 95%;
+        transform: translate(-100%, -90%);
+    }
+
+    .bot_water img,
+    .bot_water1 img,
+    .bot_water2 img,
+    .bot_water3 img {
+        width: 100%;
+    }
+
+    @keyframes cursor {
+        from {
+            border-right: 2px solid #222;
+        }
+
+        to {
+            border-right: 2px solid #777;
+        }
+    }
+
+    @-webkit-keyframes ani-mouse {
+        0% {
+            opacity: 1;
+            top: 29%;
+        }
+
+        15% {
+            opacity: 1;
+            top: 50%;
+        }
+
+        50% {
+            opacity: 0;
+            top: 50%;
+        }
+
+        100% {
+            opacity: 0;
+            top: 29%;
+        }
+    }
+
+    @-moz-keyframes ani-mouse {
+        0% {
+            opacity: 1;
+            top: 29%;
+        }
+
+        15% {
+            opacity: 1;
+            top: 50%;
+        }
+
+        50% {
+            opacity: 0;
+            top: 50%;
+        }
+
+        100% {
+            opacity: 0;
+            top: 29%;
+        }
+    }
+
+    @keyframes ani-mouse {
+        0% {
+            opacity: 1;
+            top: 29%;
+        }
+
+        15% {
+            opacity: 1;
+            top: 50%;
+        }
+
+        50% {
+            opacity: 0;
+            top: 50%;
+        }
+
+        100% {
+            opacity: 0;
+            top: 29%;
+        }
+    }
+
+    .scroll-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -100%);
+        text-align: center;
+    }
+
+    .scroll-btn>* {
+        display: inline-block;
+        line-height: 18px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #7f8c8d;
+        color: #ffffff;
+        font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .scroll-btn>*:hover,
+    .scroll-btn>*:focus,
+    .scroll-btn>*.active {
+        color: #ffffff;
+    }
+
+    .scroll-btn>*:hover,
+    .scroll-btn>*:focus,
+    .scroll-btn>*:active,
+    .scroll-btn>*.active {
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+    }
+
+    .scroll-btn .mouse {
+        position: relative;
+        display: block;
+        width: 35px;
+        height: 55px;
+        margin: 0 auto 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 3px solid white;
+        border-radius: 23px;
+    }
+
+    .scroll-btn .mouse>* {
+        position: absolute;
+        display: block;
+        top: 29%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        margin: -4px 0 0 -4px;
+        background: white;
+        border-radius: 50%;
+        -webkit-animation: ani-mouse 2.5s linear infinite;
+        -moz-animation: ani-mouse 2.5s linear infinite;
+        animation: ani-mouse 2s linear infinite;
     }
 
     /* sec2 */
@@ -327,7 +551,6 @@
         display: flex;
         position: relative;
         left: 6.5%;
-        font-family: 'mil'
     }
 
     .sec2 .txt p {
@@ -381,8 +604,8 @@
 
     .sec3 {
         background-color: #fff;
-        margin-bottom: 200px;
-        height: calc(100vh + 400px);
+        margin-bottom: 300px;
+        height: 100vh;
     }
 
     .sec3 h3 {
@@ -399,7 +622,7 @@
         justify-content: center;
         align-items: center;
         /* background-attachment: fixed; */
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
 
     .sec3 .sec3_top_img h4 {
@@ -410,9 +633,10 @@
         justify-content: center;
         align-items: center;
         font-size: 2rem;
-        width: 50%;
-        height: 50%;
-        background-color: rgba(255, 255, 255, .2);
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .3);
         color: #fff;
         backdrop-filter: blur(5px);
         transition: .3s;
@@ -440,6 +664,7 @@
 
     .sec3 .sec3_top_img:hover h4 {
         opacity: 1;
+        width: 100%;
     }
 
     .sec3 .sec3_top_img a {
@@ -469,6 +694,7 @@
         padding-left: 0;
         position: relative;
         left: 37.1%;
+        font-size: 1.5rem;
     }
 
     .sec3 .sec3_bot li a::after {
@@ -500,14 +726,15 @@
     /* sec4 */
 
     .sec4 {
-        background-color: #fff;
+        /* background-color: #fff; */
         margin-left: 100px;
         margin-bottom: 250px;
-        height: 100vh;
+        height: 80vh;
     }
 
 
     .sec4 .side_scroll {
+        /* background-color: #fff; */
         display: flex;
         width: 230vw;
     }
@@ -697,10 +924,25 @@
             right: -5%;
             position: relative;
             z-index: 1000000000;
+            top: 40%;
         }
 
         .nav-item:before {
             width: 18%;
+        }
+
+        /* sec1 */
+
+        .bot_img,
+        .bot_water,
+        .bot_water1,
+        .bot_water2,
+        .bot_water3 {
+            display: none;
+        }
+
+        .text_con::after {
+            display: none;
         }
 
         /* sec2 */
