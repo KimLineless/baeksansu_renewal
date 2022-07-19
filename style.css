@@ -330,36 +330,12 @@
 
     .bot_water {
         position: absolute;
-        left: 30%;
+        left: 32%;
         top: 94%;
         transform: translate(-100%, -90%);
     }
 
-    .bot_water1 {
-        position: absolute;
-        left: 27%;
-        top: 95%;
-        transform: translate(-100%, -90%);
-    }
-
-    .bot_water2 {
-        position: absolute;
-        left: 32%;
-        top: 95%;
-        transform: translate(-100%, -90%);
-    }
-
-    .bot_water3 {
-        position: absolute;
-        left: 27%;
-        top: 95%;
-        transform: translate(-100%, -90%);
-    }
-
-    .bot_water img,
-    .bot_water1 img,
-    .bot_water2 img,
-    .bot_water3 img {
+    .bot_water img {
         width: 100%;
     }
 
@@ -612,6 +588,10 @@
         display: none;
     }
 
+    div.cards {
+        display: none;
+    }
+
     .sec3 .sec3_top_img {
         width: 100vw;
         height: 400px;
@@ -675,10 +655,6 @@
         top: 0;
     }
 
-    .sec3 .swiper-wrapper {
-        flex-direction: column;
-    }
-
     .sec3 .sec3_bot li {
         display: flex;
         flex-direction: row-reverse;
@@ -695,6 +671,7 @@
         position: relative;
         left: 37.1%;
         font-size: 1.5rem;
+        white-space: nowrap;
     }
 
     .sec3 .sec3_bot li a::after {
@@ -726,7 +703,6 @@
     /* sec4 */
 
     .sec4 {
-        /* background-color: #fff; */
         margin-left: 100px;
         margin-bottom: 250px;
         height: 80vh;
@@ -734,15 +710,15 @@
 
 
     .sec4 .side_scroll {
-        /* background-color: #fff; */
         display: flex;
-        width: 230vw;
+        width: 100%;
+        top: 12% !important;
     }
 
     .sec4 .scroll_element {
         width: 500px;
         overflow: hidden;
-        margin-right: 100px;
+        margin-right: 60px;
     }
 
 
@@ -787,18 +763,18 @@
 
 
 
-    @media (min-width : 1000px) {
+    @media (min-width : 620px) {
         .highlight {
             background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             background-repeat: no-repeat;
-            background-size: 50% 12.5%;
+            background-size: 70% 12.5%;
             background-position: 0 60%;
             transition: background-size 0.25s ease-in;
             transition: background-position 0.25s ease-in;
         }
 
         .highlight:hover {
-            background-size: 50% 25%;
+            background-size: 70% 25%;
             background-position: 0 50%;
         }
     }
@@ -849,6 +825,10 @@
             margin-bottom: 100px;
         }
 
+        .sec3 .sec3_bot li a {
+            font-size: 1.2rem;
+        }
+
         /* sec4 */
 
         .sec4 .side_scroll {
@@ -897,8 +877,8 @@
             justify-content: center;
             top: 100%;
             left: -500%;
-            background-color: #5cbdbb;
-            width: 100%;
+            background-color: #00abd3;
+            width: 100vw;
             height: 200vh;
             z-index: 100000;
             transition: .5s;
@@ -933,21 +913,36 @@
 
         /* sec1 */
 
+        .sec1 {
+            background-position: 40% 50%;
+        }
+
         .bot_img,
-        .bot_water,
-        .bot_water1,
-        .bot_water2,
-        .bot_water3 {
+        .bot_water {
             display: none;
+        }
+
+        .text_con,
+        .text_con h3 {
+            font-size: 3rem;
+        }
+
+        .text_con {
+            top: 7%;
+            line-height: 3rem;
         }
 
         .text_con::after {
             display: none;
         }
 
+        .scroll-btn {
+            top: 80%;
+        }
+
         /* sec2 */
         .sec2 {
-            grid-template-rows: repeat(1, 600px 400px 300px);
+            grid-template-rows: repeat(1, 400px 400px 400px);
             grid-template-columns: repeat(1, 50% 50%);
             margin-bottom: 200px;
         }
@@ -1017,9 +1012,10 @@
 
         /* sec3 */
 
+        /*  */
         .sec3 {
-            margin-bottom: 100px;
-            height: 800px;
+            margin-bottom: 300px;
+            height: 1000px;
         }
 
         .sec3 .sec3_top_img {
@@ -1030,11 +1026,6 @@
             margin-bottom: 75px;
         }
 
-        .sec3 .swiper-wrapper {
-            flex-direction: row;
-        }
-
-
         .sec3 h3 {
             margin-bottom: 75px;
             text-align: center;
@@ -1042,60 +1033,28 @@
             font-weight: 300;
         }
 
-        .sec3 .sec3_bot {
-            display: flex;
-            width: 200%;
-        }
-
         .sec3 .sec3_bot li {
-            display: flex;
-            flex-wrap: wrap;
-            width: 50%;
-            flex-direction: column-reverse;
-            justify-content: center;
-            align-content: center;
-            position: relative;
-            text-align: center;
-            margin: 10px;
-        }
-
-
-        .sec3 .sec3_bot .sec3_img {
-            width: 100%;
-            left: 0;
-            opacity: 1;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 10px;
         }
 
         .sec3 .sec3_bot li a {
-            z-index: 1000;
-            display: block;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            opacity: 0;
-            transition: .3s;
-            color: black;
+            font-size: 1rem;
+            width: 60%;
+            padding: 50px;
+            padding-left: 0;
+            position: relative;
+            left: 15    %;
         }
 
-        .sec3 .sec3_bot li:hover a {
+        .sec3 .sec3_bot .sec3_img {
+            width: 15%;
+            position: relative;
+            left: 10%;
             opacity: 1;
         }
 
-        .sec3 .sec3_bot li:hover .sec3_img {
-            opacity: 0.7;
-        }
 
-        .sec3 .sec3_bot li a::after {
-            width: 50%;
-            height: 50%;
-            background-color: transparent;
-            border: 1px solid #5cbdbb;
-            left: 40%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+
 
         /* sec4 */
 
@@ -1105,4 +1064,221 @@
             margin-bottom: 0px;
             height: 600px;
         }
+    }
+
+    @media (max-width:620px) {
+        .sec3 .sec3_bot {
+            display: none;
+        }
+
+        a.btn {
+            background: #00abd3;
+            border-radius: 4px;
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: inline-block;
+            padding: 6px 30px 8px;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.1s 0s ease-out;
+        }
+
+        .no-touch a.btn:hover {
+            background: #00a2ad;
+            box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+            transform: translateY(-2px);
+            transition: all 0.25s 0s ease-out;
+        }
+
+        .no-touch a.btn:active,
+        a.btn:active {
+            background: #008a93;
+            box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+            transform: translate3d(0, 1px, 0);
+            transition: all 0.025s 0s ease-out;
+        }
+
+        div.cards {
+            display: grid;
+            grid-template-rows: repeat(1, 300px 300px 300px);
+            grid-template-columns: repeat(1, 50% 50%);
+            grid-gap: 10px;
+            margin: 80px auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.card {
+            background: #ffffff;
+            display: inline-block;
+            perspective: 1000;
+            position: relative;
+            text-align: left;
+            transition: all 0.3s 0s ease-in;
+            /* width: 100%; */
+            z-index: 1;
+        }
+
+        div.card img {
+            width: 100%;
+        }
+
+        div.card .card__image-holder {
+            background: rgba(0, 0, 0, 0.1);
+            height: 0;
+            padding-bottom: 80%;
+        }
+
+        div.card div.card-title {
+            background: #ffffff;
+            padding: 15px;
+            position: relative;
+            z-index: 0;
+        }
+
+        div.card div.card-title a.toggle-info {
+            border-radius: 32px;
+            height: 32px;
+            padding: 0;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 32px;
+        }
+
+        div.card div.card-title a.toggle-info span {
+            background: #ffffff;
+            display: block;
+            height: 2px;
+            position: absolute;
+            top: 16px;
+            transition: all 0.15s 0s ease-out;
+            width: 12px;
+        }
+
+        div.card div.card-title a.toggle-info span.left {
+            right: 14px;
+            transform: rotate(45deg);
+        }
+
+        div.card div.card-title a.toggle-info span.right {
+            left: 14px;
+            transform: rotate(-45deg);
+        }
+
+        div.card div.card-title h2 {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.05em;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.card div.card-description {
+            padding: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        div.card div.card-actions {
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+            padding: 10px 15px 20px;
+            text-align: center;
+        }
+
+        div.card div.card-flap {
+            background: #d9d9d9;
+            position: absolute;
+            top: 90%;
+            width: 100%;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+
+        div.card div.flap1 {
+            transition: all 0.3s 0.3s ease-out;
+            z-index: -1;
+        }
+
+        div.card div.flap2 {
+            transition: all 0.3s 0s ease-out;
+            z-index: -2;
+        }
+
+        div.cards.showing div.card {
+            cursor: pointer;
+            opacity: 0.6;
+            transform: scale(0.88);
+        }
+
+        .no-touch div.cards.showing div.card:hover {
+            opacity: 0.94;
+            transform: scale(0.92);
+        }
+
+        div.card.show {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+
+        div.card.show div.card-title a.toggle-info {
+            background: #ff6666 !important;
+        }
+
+        div.card.show div.card-title a.toggle-info span {
+            top: 15px;
+        }
+
+        div.card.show div.card-title a.toggle-info span.left {
+            right: 10px;
+        }
+
+        div.card.show div.card-title a.toggle-info span.right {
+            left: 10px;
+        }
+
+        div.card.show div.card-flap {
+            background: #ffffff;
+            transform: rotateX(0deg);
+        }
+
+        div.card.show div.flap1 {
+            transition: all 0.3s 0s ease-out;
+        }
+
+        div.card.show div.flap2 {
+            transition: all 0.3s 0.2s ease-out;
+        }
+
+    }
+
+    @media(max-width:600px) {
+        div.card div.card-flap {
+            top: 85%;
+        }
+
+    }
+
+    @media(max-width:550px) {
+        div.card div.card-flap {
+            top: 77%;
+        }
+
+    }
+
+    @media(max-width:500px) {
+        div.card div.card-flap {
+            top: 71%;
+        }
+
+    }
+
+    @media(max-width:400px) {
+        div.card div.card-flap {
+            top: 60%;
+        }
+
     }

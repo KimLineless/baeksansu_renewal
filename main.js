@@ -92,52 +92,22 @@ if (window.innerWidth > 1450) {
   });
 
   gsap.to('.massiveImage', {
-    xPercent: -110,
+    xPercent: -100,
     x: () => innerWidth,
     ease: 'none',
     scrollTrigger: {
       trigger: '.massiveImage',
       start: 'center center',
-      end: () => innerWidth * 4.5,
+      end: () => innerWidth * 3,
       scrub: true,
       pin: true,
       invalidateOnRefresh: true,
-      //   anticipatePin: 1,
+      anticipatePin: 1,
     },
   });
 }
 
 //
-
-if (window.innerWidth < 1000) {
-  $(function () {
-    $('.sec3_li1').mouseover(function () {
-      document.getElementById('sec3_txt1').innerHTML = '바로가기';
-    });
-    $('.sec3_li2').mouseover(function () {
-      document.getElementById('sec3_txt2').innerHTML = '바로가기';
-    });
-    $('.sec3_li3').mouseover(function () {
-      document.getElementById('sec3_txt3').innerHTML = '바로가기';
-    });
-    $('.sec3_li4').mouseover(function () {
-      document.getElementById('sec3_txt4').innerHTML = '바로가기';
-    });
-    $('.sec3_li5').mouseover(function () {
-      document.getElementById('sec3_txt5').innerHTML = '바로가기';
-    });
-  });
-
-  // let swiper2 = new Swiper(".mySwiper2", {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     loop:true,
-  //     pagination: {
-  //         el: ".swiper-pagination",
-  //         clickable: true,
-  //     },
-  // });
-}
 
 //
 ('use strict');
@@ -204,3 +174,40 @@ function wait(ms) {
 }
 
 setTimeout(typing, 800);
+
+// flip
+
+$(document).ready(function () {
+  var zindex = 10;
+
+  $('div.card').click(function (e) {
+    e.preventDefault();
+
+    var isShowing = false;
+
+    if ($(this).hasClass('show')) {
+      isShowing = true;
+    }
+
+    if ($('div.cards').hasClass('showing')) {
+      // a card is already in view
+      $('div.card.show').removeClass('show');
+
+      if (isShowing) {
+        // this card was showing - reset the grid
+        $('div.cards').removeClass('showing');
+      } else {
+        // this card isn't showing - get in with it
+        $(this).css({ zIndex: zindex }).addClass('show');
+      }
+
+      zindex++;
+    } else {
+      // no cards in view
+      $('div.cards').addClass('showing');
+      $(this).css({ zIndex: zindex }).addClass('show');
+
+      zindex++;
+    }
+  });
+});
