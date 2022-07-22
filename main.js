@@ -1,5 +1,18 @@
 AOS.init();
 
+let bWidth = window.innerWidth;
+window.addEventListener('resize', () => {
+  const nWidth = window.innerWidth;
+  if ((bWidth < 1500 && nWidth >= 1500) || (bWidth > 100 && nWidth <= 1000)) {
+    location.reload();
+  }
+  beforeWidth = nowWidth;
+});
+
+function resize() {
+  $('#sec4').load(window.location.href + '#sec4');
+}
+
 $('.ham').click(function () {
   $(this).toggleClass('active');
   $('.gnb').on('scroll touchmove mousewheel', function (event) {
@@ -67,38 +80,48 @@ window.addEventListener('scroll', () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window.innerWidth > 1000) {
+if (window.innerWidth > 1900) {
   $(document).ready(function () {
     $('#multiscroll').multiscroll();
   });
 
   gsap.to('.massiveImage', {
-    xPercent: -250,
+    xPercent: -255,
     x: () => innerWidth,
     ease: 'none',
     scrollTrigger: {
       trigger: '.massiveImage',
-      start: 'center center',
-      end: () => innerWidth * 2.5,
+      start: 'top top',
+      end: () => innerWidth * 3,
       scrub: true,
       pin: true,
       invalidateOnRefresh: true,
       anticipatePin: 1,
     },
   });
-} else if (window.innerWidth < 1000) {
-  let swiper = new Swiper('.mySwiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+} else if (window.innerWidth > 1500) {
+  $(document).ready(function () {
+    $('#multiscroll').multiscroll();
+  });
+
+  gsap.to('.massiveImage', {
+    xPercent: -260,
+    x: () => innerWidth,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.massiveImage',
+      start: 'top top',
+      end: () => innerWidth * 3,
+      scrub: true,
+      pin: true,
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
-} else if (window.innerWidth < 600) {
+} else if (window.innerWidth < 1500) {
   let swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 0,
+    slidesPerView: 2.5,
+    spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
