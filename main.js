@@ -67,7 +67,7 @@ window.addEventListener('scroll', () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window.innerWidth > 1450) {
+if (window.innerWidth > 1000) {
   $(document).ready(function () {
     $('#multiscroll').multiscroll();
   });
@@ -79,30 +79,29 @@ if (window.innerWidth > 1450) {
     scrollTrigger: {
       trigger: '.massiveImage',
       start: 'center center',
-      end: () => innerWidth * 4,
+      end: () => innerWidth * 2.5,
       scrub: true,
       pin: true,
       invalidateOnRefresh: true,
       anticipatePin: 1,
     },
   });
-} else if (window.innerWidth > 1000) {
-  $(document).ready(function () {
-    $('#multiscroll').multiscroll();
+} else if (window.innerWidth < 1000) {
+  let swiper = new Swiper('.mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
   });
-
-  gsap.to('.massiveImage', {
-    xPercent: -100,
-    x: () => innerWidth,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.massiveImage',
-      start: 'center center',
-      end: () => innerWidth * 3,
-      scrub: true,
-      pin: true,
-      invalidateOnRefresh: true,
-      anticipatePin: 1,
+} else if (window.innerWidth < 600) {
+  let swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
   });
 }
@@ -211,3 +210,5 @@ $(document).ready(function () {
     }
   });
 });
+
+//
