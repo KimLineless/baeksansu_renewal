@@ -6,279 +6,346 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="common.js" defer></script>
 </head>
 
 <body>
     <div class="wrap">
-        <header class="hd">
-            <div class="inner">
-                <h1 class="logo"><a href="#sec1"><img src="./img/logo.png" alt=""></a></h1>
-                <nav>
-                    <ul class="gnb">
-                        <li><a href="#" class="nav-item">브랜드스토리</a></li>
-                        <li><a href="#" class="nav-item">제품주문</a></li>
-                        <li><a href="#" class="nav-item">제품소개</a></li>
-                        <li><a href="#" class="nav-item">홍보관</a></li>
-                        <li><a href="#" class="nav-item">참여관</a></li>
-                        <li><a href="#" class="nav-item">고객센터</a></li>
-                        <span class="nav-indicator"></span>
-                    </ul>
-                </nav>
-                <div class="search-container">
-                    <input type="text" name="search" placeholder="검색어를 입력하세요" class="search-input">
-                    <a href="#" class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </div>
-                <div class="ham">
-                    <span class="bar"></span>
+        <header>
+            <i class="fa-solid fa-bars ham"></i>
+            <div class="logo"><img src="./img/logo.png" alt=""></div>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">재단소개</a>
+                        <ul class="depth2 on">
+                            <li><a href="./index.html">인사말</a></li>
+                            <li><a href="./index.html">재단소개</a></li>
+                            <li><a href="./index.html">윤리경영</a></li>
+                            <li><a href="./index.html">경영공시</a></li>
+                            <li><a href="./index.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">공연</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">공연일정</a></li>
+                            <li><a href="./index.html">객석안내</a></li>
+                            <li><a href="./index.html">티켓안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">전시일정</a></li>
+                            <li><a href="./index.html">교육신청</a></li>
+                            <li><a href="./index.html">온라인전시</a></li>
+                            <li><a href="./index.html">소장품</a></li>
+                            <li><a href="./index.html">연구자료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아카데미</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">문화행사</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">행사일정</a></li>
+                            <li><a href="./index.html">행사소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">대관</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">대관공고</a></li>
+                            <li><a href="./index.html">대관운영</a></li>
+                            <li><a href="./index.html">대관신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">열린마당</a>
+                        <ul class="depth2">
+                            <li><a href="./index.html">공지사항</a></li>
+                            <li><a href="./index.html">자유게시판</a></li>
+                            <li><a href="./index.html">Q&A</a></li>
+                            <li><a href="./index.html">고객제안게시판</a></li>
+                            <li><a href="./index.html">자료실</a></li>
+                            <li><a href="./index.html">경주예술인맵</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class='search_con'>
+                <div class="search">
+                    <input type="text" placeholder=" 검색어를 입력해주세요.">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
         </header>
-        <section class="sec1" id="sec1">
-            <div class="text_con">천지차이 백산수
-                <h3 class="text"></h3>
+        <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+        <section class="sec1">
+            <h2 hidden></h2>
+            <div class="slide">
+                <div class="slide_banner">
+                    <div class="slide1"></div>
+                    <div class="slide2"></div>
+                    <div class="slide3"></div>
+                </div>
+                <div class="slide_txt">
+                    <ul class="txt1">
+                        <li>01</li>
+                        <li>신라오기 공연</li>
+                    </ul>
+                    <ul class="txt2">
+                        <li>02</li>
+                        <li>라우 갤러리</li>
+                    </ul>
+                    <ul class="txt3">
+                        <li>03</li>
+                        <li>만파식적제</li>
+                    </ul>
+                </div>
             </div>
-            <span class="scroll-btn">
-                <a href="#sec2">
-                    <span class="mouse">
-                        <span>
-                        </span>
-                    </span>
-                </a>
-                <p>scroll ↓</p>
-            </span>
-
-            <!-- <div class="bot_img"><img src="./img/nukki.png" alt=""></div>
-            <div class="bot_water"><img src="./img/물.png" alt=""></div> -->
-
         </section>
-        <section class="sec2" id="sec2">
-            <div class="img_place"></div>
-            <div class="txt" data-aos="fade-right" data-aos-duration="2500">
-                <h2>천지차이 백산수</h2>
-                <div class="txtC">
-                    <p>수원지의 차이</p>
-                    <p>맑음의 차이</p>
-                    <p>생명력의 차이</p>
-                    <p>수원지가 천지차이</p>
+        <section class="sec2" id="sc2">
+            <h3 hidden></h3>
+            <div class="inner">
+                <div class="sec2_top">
+                    <p>show</p>
+                    <p>시민과 함께 역사를 만드는 경주문화재단</p>
+                    <p>today</p>
+                    <p>
+                        문화예술은 도시를 살리는 '힘'입니다. <br>
+                        경주문화재단은 시민 여러분과 함께 가슴 <br> 벅찬
+                        역사를 만들어 가겠습니다.
+                    </p>
+                </div>
+                <div class="calendar">
+                    <div class="month">6월</div>
+                    <div class="day">
+                        <div>
+                            <p>16</p>
+                            <p>오늘</p>
+                        </div>
+                        <div>
+                            <p>17</p>
+                            <p>금</p>
+                        </div>
+                        <div class="sat">
+                            <p>18</p>
+                            <p>토</p>
+                        </div>
+                        <div class="sun">
+                            <p>19</p>
+                            <p>일</p>
+                        </div>
+                        <div>
+                            <p>20</p>
+                            <p>월</p>
+                        </div>
+                        <div>
+                            <p>21</p>
+                            <p>화</p>
+                        </div>
+                        <div>
+                            <p>22</p>
+                            <p>수</p>
+                        </div>
+                        <div>
+                            <p>23</p>
+                            <p>목</p>
+                        </div>
+                        <div>
+                            <p>24</p>
+                            <p>금</p>
+                        </div>
+                        <div class="sat">
+                            <p>25</p>
+                            <p>토</p>
+                        </div>
+                        <div class="sun">
+                            <p>26</p>
+                            <p>일</p>
+                        </div>
+                        <div>
+                            <p>27</p>
+                            <p>월</p>
+                        </div>
+                        <div>
+                            <p>28</p>
+                            <p>화</p>
+                        </div>
+                        <div>
+                            <p>29</p>
+                            <p>수</p>
+                        </div>
+                        <div>
+                            <p>30</p>
+                            <p>목</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper mySwiper2 sec2_con" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-anchor-placement="top-bottom">
+                    <ul class="swiper-wrapper slide_wrap sec2_slide">
+                        <li class="swiper-slide sec2_1">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide sec2_2">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide sec2_3">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide sec2_4">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide sec2_5">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide sec2_6">
+                            <div class="hover">
+                                <button class="btn-2"><span>바로가기</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="img_ham">
-                <div class="ham_i"><img data-aos="fade-up" data-aos-duration="2500" src="./img/백산수함량.png" alt="">
-                </div>
-                <div class="gun" data-aos="fade-left" data-aos-duration="2500">
-                    <p>건강한 백산수</p>
-                </div>
-            </div>
-            <div class="img_place2"></div>
         </section>
 
         <section class="sec3">
-            <div class="sec3_top_img" data-aos="fade-up" data-aos-duration="2500">
-                <h4 class="hover-1">
-                    <a href="#"></a>
-                    구매하기
-                </h4>
-            </div>
-            <div class="inner">
-                <h3>백산수 이야기</h3>
-                <ul class="sec3_bot">
-                    <li class="sec3_li1">
-                        <a href="#" id="sec3_txt1" class="highlight">백산수는 다양한 용량으로 상황에 맞게 어디서든 활용이 가능해요!</a>
-                        <div class="sec3_img sec3_img1"><img src="./img/sns.jpg" alt=""></div>
-                    </li>
-                    <li class="sec3_li2">
-                        <a href="#" id="sec3_txt2" class="highlight">자극적인 배달음식으로 몸이 무겁고 찌뿌둥할 땐?</a>
-                        <div class="sec3_img"><img src="./img/배달.jpg" alt=""></div>
-                    </li>
-                    <li class="sec3_li3">
-                        <a href="#" id="sec3_txt3" class="highlight">따뜻한 그림체로 일상의 위로를 주는 ‘지수’ 작가님과 천지차이 백산수의 콜라보</a>
-                        <div class="sec3_img"><img src="./img/지수.jpg" alt=""></div>
-                    </li>
-                    <li class="sec3_li4">
-                        <a href="#" id="sec3_txt4" class="highlight"> 백산수 라벨 상단의 흰색 삼각형을 잡고 뜯으면 손쉽게 라벨을 제거할 수 있어요</a>
-                        <div class="sec3_img"><img src="./img/라벨.jpg" alt=""></div>
-                    </li>
-                    <li class="sec3_li5">
-                        <a href="#" id="sec3_txt5" class="highlight">대부분의 생수는 지하수를 인위적으로 퍼 올리는 방식! 하지만 백산수는 다릅니다</a>
-                        <div class="sec3_img"><img src="./img/백산수방식.jpg" alt=""></div>
-                    </li>
-                </ul>
-
-                <div class="cards">
-
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/sns.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                백산수는 다양한 용량으로 상황에 맞게 어디서든 활용이 가능해요!
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/배달.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                자극적인 배달음식으로 몸이 무겁고 찌뿌둥할 땐?
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/지수.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                따뜻한 그림체로 일상의 위로를 주는 ‘지수’ 작가님과 천지차이 백산수의 콜라보
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/라벨.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                백산수 라벨 상단의 흰색 삼각형을 잡고 뜯으면 손쉽게 라벨을 제거할 수 있어요
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/백산수방식.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                대부분의 생수는 지하수를 인위적으로 퍼 올리는 방식! 하지만 백산수는 다릅니다
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image-holder">
-                            <img class="card__image" src="./img/습관.jpg" alt="sns1" />
-                        </div>
-                        <div class="card-title">
-                            <a href="#" class="toggle-info btn">
-                                <span class="left"></span>
-                                <span class="right"></span>
-                            </a>
-                            <h2>
-                                펼쳐보기
-                            </h2>
-                        </div>
-                        <div class="card-flap flap1">
-                            <div class="card-description">
-                                백산수 6월의 바른물습관챌린지
-                            </div>
-                            <div class="card-flap flap2">
-                                <div class="card-actions">
-                                    <a href="#" class="btn">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+            <h4 hidden></h4>
+            <div class="sec3_top">
+                <div class="top_con">
+                    <p>문화콘텐츠</p>
+                    <button class="btn-3"><span>Read More</span></button>
                 </div>
+            </div>
+            <div class="sec3_con">
+                <div class="sec3_hd">
+                    <span class="on">공연</span>
+                    <span>전시</span>
+                    <span>아카데미</span>
+                </div>
+                <div class="sec3_vw" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <div class="vw_1 on">
+                        <div class="vw"><img src="./img/공연1.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/공연2.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/공연3.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/공연4.jpg" alt=""></div>
+                    </div>
+                    <div class="vw_2">
+                        <div class="vw"><img src="./img/전시1.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/전시2.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/전시3.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/전시4.jpg" alt=""></div>
+                    </div>
+                    <div class="vw_3">
+                        <div class="vw"><img src="./img/아카데미1.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/아카데미2.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/아카데미3.jpg" alt=""></div>
+                        <div class="vw"><img src="./img/아카데미4.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="swiper-pagination"></div>
+        <section class="sec4">
+            <div class="sec4_hd">
+                <h5>Garts <br>
+                    gallery
+                </h5>
+            </div>
+
+            <div class="gallery">
+                <div class="col">
+                    <div class="image">
+                        <img src="./img/갤러리1.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리2.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image">
+                        <img src="./img/갤러리4.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리5.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image">
+
+                        <img src="./img/갤러리7.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리8.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/갤러리9.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="sec4 swiper mySwiper" id="sec4">
-            <h4>백산수 갤러리</h4>
-            <div class="side_scroll  massiveImage swiper-wrapper">
-                <div class="scroll_element swiper-slide card"><img src="./img/jh.png" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/sk.jpg"" alt=""></div>
-                <div class=" scroll_element swiper-slide card"><img src="./img/sk2.jpg" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/sk3.jpg" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/jh2.png" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/sk4.jpg" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/sk5.jpg" alt=""></div>
-                <div class="scroll_element swiper-slide card"><img src="./img/sk6.jpg" alt=""></div>
+
+        <section class="sec5" id="sc5">
+            <h6>
+                <p>Garts</p>
+                <p>Magagine</p>
+                <p>Book</p>
+            </h6>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper sec5_slide">
+                    <div class="swiper-slide sec5_1">
+                        <img src="./img/매거진1.png" />
+                    </div>
+                    <div class="swiper-slide sec5_2">
+                        <img src="./img/매거진2.jpg" />
+                    </div>
+                    <div class="swiper-slide sec5_3">
+                        <img src="./img/매거진3.jpg" />
+                    </div>
+                    <div class="swiper-slide sec5_4">
+                        <img src="./img/매거진4.png" />
+                    </div>
+                </div>
+                <div class="swiper-button-next next3"></div>
+                <div class="swiper-button-prev prev3"></div>
+                <div class="swiper-pagination3"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </section>
+
         <footer>
             <div class="foot">
                 <div class="foot_top">
@@ -287,36 +354,18 @@
                     <span>회사소개</span>
                 </div>
                 <div class="foot_bot">
-                    <span>대표자 : 이병학</span>
-                    <span>사업자번호 : 118-81-03914</span>
+                    <span>대표자 : 주낙영</span>
+                    <span>사업자번호 : 050-82-08901</span>
                     <span>팩스 : 054-777-5824</span> <br>
-                    <span>문의전화 : 080-023-5181</span>
+                    <span>문의전화 : 1588-4925</span>
                     <span>이메일 : gjart@gjartcenter.kr</span>
-                    <p> COPYRIGHT©NONGSHIM.CO.LTD All Rights Reserved</p>
+                    <p>Copyright(c) 2021 Gyeongju Arts Center. All rights reserved.</p>
                 </div>
             </div>
+            <div class="foot_img2"><img src="./img/투명로고.png" alt=""></div>
+            <div class="foot_img1"><img src="./img/웹접근.png" alt=""></div>
         </footer>
     </div>
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-
-
-    <script src="main.js"></script>
 </body>
 
 </html>
